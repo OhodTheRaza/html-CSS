@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <p id="details"></p>
+        <p id="details1"></p>
+
+        <script>
+            class Car {
+                constructor(carname, color) {
+                this.carname = carname;
+                this.color = color;
+                }
+            }
+
+            class ElectricCar extends Car {
+                constructor(carname, color, battery) {
+                super(carname, color); 
+                this.battery = battery;
+                }
+            }
+
+            var myCar1 = new Car("Ford", "White");
+            var myCar2 = new ElectricCar("Tesla", "Red", "97%");
+            document.getElementById("details").innerHTML = myCar1.carname +" " + myCar1.color;
+            document.getElementById("details1").innerHTML = myCar2.carname +" " + myCar2.color + " " + myCar2.battery;
+        </script>
+    </body>
+</html>
